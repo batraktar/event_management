@@ -7,11 +7,9 @@ from drf_yasg import openapi
 from drf_yasg.views import get_schema_view
 from django.urls import path, include
 
-# Створюємо роутер
 router = DefaultRouter()
 router.register(r'events', EventViewSet)
 
-# Налаштовуємо Swagger UI
 schema_view = get_schema_view(
     openapi.Info(
         title="Event Management API",
